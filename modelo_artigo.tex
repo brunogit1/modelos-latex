@@ -1,0 +1,46 @@
+\documentclass{article}
+% \usepackage[utf8]{inputenc} % Aparentemente a classe article não está mais exigindo o pacote inputenc
+\usepackage[brazil]{babel} % Traduz os títulos das seções para o português
+\usepackage{lipsum}
+\usepackage[a4paper,left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry} % Este pacote define as margens da página
+\usepackage[usenames,dvipsnames]{xcolor} % Modifica as cores
+\definecolor{minhacor}{RGB}{85,158,131} % Define novas cores
+\usepackage{indentfirst} % Indenta o (primeiro) parágrafo
+\usepackage{amsmath} % Pacote para comandos matemáticos
+
+\begin{document}
+  \title{Meu modelo LaTeX} % Título do meu trabalho
+  \author{Bruno Fontes de Sousa} % Autor
+  \date{Março de 2020} % Data
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Primeira página
+  \maketitle            % Imprime o título, o author e a data
+  \thispagestyle{empty} %
+  \newpage              % Quebra de página
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \setcounter{page}{1}  % Reiniciando a numeração da pagina
+  \pagenumbering{Roman} % Estilo do número da página
+  \tableofcontents      % Sumário
+  \newpage              % Quebra de página
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \setcounter{page}{1}  % Reiniciando a numeração da pagina
+  \pagenumbering{arabic} % Estilo do número da página
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \section{AAA} % 1ª seção
+    \lipsum[1-5]
+    \subsection{aaa} % 1ª subseção
+      \lipsum[2-5]
+  \section{BBB} % 2ª seção
+    \lipsum[1-4]
+    \subsection{aaa} % 1ª subseção
+      \lipsum[3-5]
+
+      % \begin{equation*}
+        % dd
+      % \end{equation*}
+
+\end{document}
